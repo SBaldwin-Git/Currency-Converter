@@ -28,15 +28,15 @@ In the data directory we've included a JSON file of currency exchange rates whic
 
 ## New to Ruby?
 
-To install Ruby follow the instructions here:
+To install Ruby follow the instructions here:  ✅
 
     https://www.ruby-lang.org/en/downloads/
 
-To install Rubygems - a package management framework for Ruby - go here:
+To install Rubygems - a package management framework for Ruby - go here:  ✅
 
     https://rubygems.org/pages/download
 
-To install Bundler - a Ruby gem management gem:
+To install Bundler - a Ruby gem management gem:  ✅
 
     https://bundler.io/
 

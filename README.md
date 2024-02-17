@@ -25,3 +25,4 @@ Please include instructions on how to setup and run your solution here.
 
 - From reading the company values, there was an emphasis on functional and and well tested code. I decided to use a functional approach to the solution and also use TDD to ensure the code was well tested.
 - Styled the code to be as readable as possible e.g use Prettier.
+- Use RSpec for testing as it is a popular testing framework in the Ruby community and is consdidered more readable than Test::Unit.
