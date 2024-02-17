@@ -20,9 +20,16 @@ Please include instructions on how to setup and run your solution here.
 - Functional programming
 - Maintainable code
 
+## Test-Driven Development
+
+1. Write a failing test
+2. Create UML class diagram
+3. Write the minimum amount of code to pass the test
+4. Refactor the code
+5. Repeat
 
 ## Your Design Decisions
 
 - From reading the company values, there was an emphasis on functional and and well tested code. I decided to use a functional approach to the solution and also use TDD to ensure the code was well tested.
 - Styled the code to be as readable as possible e.g use Prettier.
-- Use RSpec for testing as it is a popular testing framework in the Ruby community and is consdidered more readable than Test::Unit.
+- Use RSpec for testing as it is a popular testing framework in the Ruby community and is consdidered more readable than Test::Unit. RSpec also resembles the structure of Jest which i am familiar with.
