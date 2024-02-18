@@ -5,20 +5,15 @@
 
 ## Similar to import in javascript
 require_relative "data_handler"
+require_relative "exchange_rate_handler"
 
 module CurrencyExchange
   ## Method to calculate the rate
   def self.rate(date, from_currency, to_currency)
     # TODO: calculate and return rate
+
+    ## Create a new instance of DataHandler
+    data_handler = DataHandler.new
   end
 
-  def self.load_data
-    # Create a new instance of the DataHandler class
-    data_handler = DataHandler.new
-    # Load the data from the file
-    data_object = data_handler.load_data("data/eurofxref-hist-90d.json")
-    # Console log the data
-    puts "Loaded data:"
-    puts data_object.inspect
-  end
 end
