@@ -1,0 +1,18 @@
+@startuml exchange_rate
+
+class CurrencyExchange {
+  + rate(date, from_currency, to_currency)
+}
+
+class DataHandler {
+  + load_data(file_path)
+}
+
+class ExchangeRateHandler {
+  + get_rate(currency)
+}
+
+CurrencyExchange --> DataHandler: 1
+DataHandler --> ExchangeRateHandler: 1
+
+@enduml

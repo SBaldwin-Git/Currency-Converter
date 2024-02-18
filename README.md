@@ -33,12 +33,13 @@ Please include instructions on how to setup and run your solution here.
 - From reading the company values, there was an emphasis on functional and and well tested code. I decided to use a functional approach to the solution and also use TDD to ensure the code was well tested.
 - Styled the code to be as readable as possible e.g use Prettier.
 - Use RSpec for testing as it is a popular testing framework in the Ruby community and is consdidered more readable than Test::Unit. RSpec also resembles the structure of Jest which i am familiar with.
+- Single Responsibility Principle
 
 ## Learning Outcomes
 
 - I learned the basics of Ruby and how to write a simple program in Ruby.
 - I learned how to use RSpec for testing in Ruby.
-- I learned how to use Bundler to manage gems in Ruby.
-- I further practised TDD and OOP.
+- Further practised TDD and OOP.
+- Single Responsibility Principle
 
 ## Future Improvements
