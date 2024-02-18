@@ -31,7 +31,7 @@ Please include instructions on how to setup and run your solution here.
 ## Your Design Decisions
 
 - From reading the company values, there was an emphasis on functional and and well tested code. I decided to use a functional approach to the solution and also use TDD to ensure the code was well tested.
-- Styled the code to be as readable as possible e.g use Prettier.
+- Styled the code to be as readable as possible e.g use Prettier. (Update: Found Prettier does not support Ruby and will use Rufo instead)
 - Use RSpec for testing as it is a popular testing framework in the Ruby community and is consdidered more readable than Test::Unit. RSpec also resembles the structure of Jest which i am familiar with.
 - Single Responsibility Principle
 
@@ -40,6 +40,7 @@ Please include instructions on how to setup and run your solution here.
 - I learned the basics of Ruby and how to write a simple program in Ruby.
 - I learned how to use RSpec for testing in Ruby.
 - Further practised TDD and OOP.
-- Single Responsibility Principle
+- Single Responsibility Principle.
+- Prettier does not support Ruby and will use Rufo instead.
 
 ## Future Improvements
