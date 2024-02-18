@@ -14,6 +14,11 @@ module CurrencyExchange
 
     ## Create a new instance of DataHandler
     data_handler = DataHandler.new
-  end
 
+    ## Create a new instance of ExchangeRateHandler
+    exchange_rate_handler = ExchangeRateHandler.new(data_handler)
+
+    ## Call the get_rate method from ExchangeRateHandler
+    exchange_rate_handler.get_rate(date, from_currency, to_currency)
+  end
 end
