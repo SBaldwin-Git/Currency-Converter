@@ -1,3 +1,5 @@
+require_relative '../lib/currency_exchange.rb'
+
 RSpec.describe CurrencyExchange do
   describe '.rate' do
     it 'returns the exchange rate for valid input' do
