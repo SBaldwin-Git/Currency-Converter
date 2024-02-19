@@ -11,7 +11,6 @@ class DataHandler
       return data_object
       ## rescue is like catch in javascript
     rescue StandardError => e
-      puts "Error loading data: #{e.message}"
       return nil
     end
   end

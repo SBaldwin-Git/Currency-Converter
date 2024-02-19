@@ -1,7 +1,6 @@
-# spec/data_handler_spec.rb
-require_relative "../lib/data_handler"
+require_relative "../lib/exchange_rate_handler"
 
-RSpec.describe DataHandler do
+RSpec.describe ExchangeRateHandler do
   describe "class tests:" do
     it "loads data from a valid file" do
       data_handler = DataHandler.new
