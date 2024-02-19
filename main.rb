@@ -8,8 +8,6 @@ def main
   from_currency = "EUR"
   to_currency = "USD"
 
-  puts "lol"
-
   begin
     # Calling the rate method
     result = CurrencyExchange.rate(date, from_currency, to_currency)
