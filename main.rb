@@ -9,10 +9,13 @@ def main
   to_currency = "USD"
 
   begin
-    # Calling the rate method
+    # Calling the rate method from the CurrencyExchange module
     result = CurrencyExchange.rate(date, from_currency, to_currency)
+
+    # Print the calculated exchange rate
     puts "The exchange rate is: #{result}"
   rescue StandardError => e
+    # Print an error message if an exception is raised
     puts "Error: #{e.message}"
   end
 end

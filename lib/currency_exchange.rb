@@ -1,11 +1,6 @@
-# Find try catch ruby implementation
-# Return the exchange rate between from_currency and to_currency on date as a float.
-# Raises an exception if unable to calculate requested rate.
-# Raises an exception if there is no rate for the date provided.
-
 # Main Module
 
-## Similar to import in javascript
+## Similar to import in JavaScript
 require_relative "data_handler"
 require_relative "exchange_rate_handler"
 
