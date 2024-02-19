@@ -8,7 +8,32 @@ Please see the INSTRUCTIONS.md file for more information.
 
 ## Your Solution Setup and Run Instructions
 
-Please include instructions on how to setup and run your solution here.
+1. Install gems:
+
+```
+bundle install
+```
+
+2. Run tests:
+
+```
+bundle exec rspec
+```
+
+3. Start a console session & load the template library:
+
+```
+bundle exec irb -I lib -r ./lib/currency_exchange.rb
+```
+
+4. Calculate an exchange rate:
+
+Given the application currently only supports a JSON file converting from EUR to other currencies, the following examples can be used:
+The first will return an error as converting from USD to GBP is not supported yet.
+```
+CurrencyExchange.rate(Date.new(2018, 11, 22), "USD", "GBP")
+```
+CurrencyExchange.rate(Date.new("2018, 12, 11"), "EUR", "USD")
 
 ## Your Approach and Preparation
 

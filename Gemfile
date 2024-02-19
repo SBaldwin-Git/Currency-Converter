@@ -4,3 +4,4 @@ source "https://rubygems.org"
 
 gem "irb"
 gem "test-unit"
+gem "rspec"
