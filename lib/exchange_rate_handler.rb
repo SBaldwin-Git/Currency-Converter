@@ -1,31 +1,18 @@
 require_relative "data_handler"
 
 class ExchangeRateHandler
-  def initialize(data_handler)
-    # Initialize with a DataHandler instance to handle data loading
-    # OOP
+  def initialize(data_handler, from_currency)
     @data_handler = data_handler
+    @base_currency = from_currency
   end
 
-  def get_rate(date, from_currency, to_currency)
-    # Load the data from the file
-    # The file path is declared here so it can be easily changed in the future
-    data = @data_handler.load_data("../data/eurofxref-hist-90d.json")
+  def get_rate(date, to_currency)
+    data = @data_handler.load_data(File.join(__dir__, "..", "data", "eurofxref-hist-90d.json"))
 
-    # Check if the data exists
-    # Check if the date exists within that data
-    if data && data[date]
-      # Check if both from_currency and to_currency exist for the given date
-      if data[date][from_currency] && data[date][to_currency]
-        # Calculate and return the exchange rate
-        return data[date][to_currency] / data[date][from_currency]
-      else
-        # Raise an error if either from_currency or to_currency is not found
-        raise StandardError, "Currency not found"
-      end
+    if data && data[date] && data[date].key?(to_currency)
+      return data[date][to_currency]
     else
-      # Raise an error if the date is not found
-      raise StandardError, "Date not found"
+      raise StandardError, "Currency not found"
     end
   end
 end
