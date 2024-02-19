@@ -10,7 +10,7 @@ class ExchangeRateHandler
     data = @data_handler.load_data(File.join(__dir__, "..", "data", "eurofxref-hist-90d.json"))
 
     if data && data[date] && data[date].key?(to_currency)
-      return data[date][to_currency]
+      return data[date][to_currency].to_f
     else
       raise StandardError, "Currency not found"
     end
