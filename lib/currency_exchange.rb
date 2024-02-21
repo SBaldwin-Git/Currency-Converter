@@ -8,11 +8,11 @@ require "date"
 module CurrencyExchange
   ## Method to calculate the rate
   def self.rate(date, from_currency, to_currency)
-
     # Check if from_currency is "EUR"
-    unless from_currency == "EUR"
-      raise StandardError, "Sorry, the app currently only supports information on euros (EUR)."
-    end
+    # Commented out for future reference
+    # unless from_currency == "EUR"
+    #   raise StandardError, "Sorry, the app currently only supports information on euros (EUR)."
+    # end
 
     ## If the date is a Date object, convert it to a string
     date_str = ::Date === date ? date.strftime("%Y-%m-%d") : date
@@ -25,7 +25,7 @@ module CurrencyExchange
     exchange_rate_handler = ExchangeRateHandler.new(data_handler, from_currency)
 
     ## Call the get_rate method from ExchangeRateHandler
-    ## For now, the from_currency is not used
+    ## Pass both from_currency and to_currency
     exchange_rate_handler.get_rate(date_str, to_currency)
   end
 end
