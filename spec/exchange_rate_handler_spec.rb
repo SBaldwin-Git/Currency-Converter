@@ -31,7 +31,7 @@ RSpec.describe ExchangeRateHandler do
       exchange_rate_handler = ExchangeRateHandler.new(data_handler, "EUR")
 
       # Expect an error to be raised with the message "Currency not found"
-      expect { exchange_rate_handler.get_rate("2021-01-01", "USD") }.to raise_error "Currency not found"
+      expect { exchange_rate_handler.get_rate("2025-01-01", "USD") }.to raise_error "Could not find exchange rate for the given date"
     end
 
     it "checks if an error is raised for a non-existent currency" do
@@ -39,16 +39,9 @@ RSpec.describe ExchangeRateHandler do
       exchange_rate_handler = ExchangeRateHandler.new(data_handler, "EUR")
 
       # Expect an error to be raised with the message "Currency not found"
-      expect { exchange_rate_handler.get_rate("2021-01-04", "JPY") }.to raise_error "Currency not found"
+      expect { exchange_rate_handler.get_rate("2018-11-22", "LOL") }.to raise_error "Currency not found"
     end
 
-    it "checks if an error is raised for a non-existent currency and date" do
-      data_handler = DataHandler.new
-      exchange_rate_handler = ExchangeRateHandler.new(data_handler, "EUR")
-
-      # Expect an error to be raised with the message "Currency not found"
-      expect { exchange_rate_handler.get_rate("2021-01-01", "JPY") }.to raise_error "Currency not found"
-    end
 
     it "checks if the rate is returned for a valid date and currency" do
       data_handler = DataHandler.new

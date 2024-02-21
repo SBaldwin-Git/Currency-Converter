@@ -10,6 +10,10 @@ class DataHandler
       # Parse the JSON data into a Ruby object
       data_object = JSON.parse(json_data)
 
+      if data_object.nil?
+        raise StandardError, "Error parsing JSON data"
+      end
+
       # Return the parsed data object
       return data_object
     rescue StandardError => e

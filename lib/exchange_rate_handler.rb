@@ -12,6 +12,16 @@ class ExchangeRateHandler
     # Load data from the JSON file using the data handler
     data = @data_handler.load_data(File.join(__dir__, "..", "data", "eurofxref-hist-90d.json"))
 
+    # Check if the date is not found in the data
+    if data[date].nil?
+      raise StandardError, "Could not find exchange rate for the given date"
+    end
+
+    # Check if currency is found in the data, unless it is EUR
+    if to_currency != "EUR" && data[date][to_currency].nil?
+      raise StandardError, "Currency not found"
+    end
+
     # Check if data is successfully loaded
     if data.nil?
       raise StandardError, "Error loading data from file"
