@@ -33,7 +33,7 @@ The first will return an error as converting from USD to GBP is not supported ye
 ```
 CurrencyExchange.rate(Date.new(2018, 11, 22), "USD", "GBP")
 ```
-CurrencyExchange.rate(Date.new("2018, 12, 11"), "EUR", "USD")
+CurrencyExchange.rate(Date.new(2018, 12, 11), "EUR", "USD")
 
 ## Your Approach and Preparation
 

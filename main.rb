@@ -4,7 +4,7 @@ require_relative "lib/currency_exchange"
 # Entry point method
 def main
   # Example date, from_currency, and to_currency
-  date = "2018-12-11"
+  date = Date.new(2018, 12, 11)
   from_currency = "GBP"
   to_currency = "USD"
 

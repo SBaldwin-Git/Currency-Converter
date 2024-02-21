@@ -1,7 +1,7 @@
 require_relative "data_handler"
 
 class ExchangeRateHandler
-  # Constructor method to initialize the ExchangeRateHandler
+  # Constructor method to initialise the ExchangeRateHandler
   def initialize(data_handler, from_currency)
     @data_handler = data_handler  # Store the data handler instance
     @base_currency = from_currency  # Store the base currency
@@ -18,13 +18,19 @@ class ExchangeRateHandler
     end
 
     # Retrieve the exchange rates for the base and target currencies
-    base_currency_rate = data[date][@base_currency].to_f
     to_currency_rate = data[date][to_currency].to_f
+
+    # If @base_currency is EUR, the base currency rate is 1
+    if @base_currency == "EUR"
+      base_currency_rate = 1
+    else
+      base_currency_rate = data[date][@base_currency].to_f
+    end
 
     # Check if both exchange rates are found
     if base_currency_rate && to_currency_rate
       # Calculate the cross-currency rate
-      cross_rate = base_currency_rate / to_currency_rate
+      cross_rate = to_currency_rate / base_currency_rate
 
       # Print information for debugging
       puts "Base currency rate: #{base_currency_rate}"
