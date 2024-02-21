@@ -42,7 +42,6 @@ RSpec.describe ExchangeRateHandler do
       expect { exchange_rate_handler.get_rate("2018-11-22", "LOL") }.to raise_error "Currency not found"
     end
 
-
     it "checks if the rate is returned for a valid date and currency" do
       data_handler = DataHandler.new
       exchange_rate_handler = ExchangeRateHandler.new(data_handler, "EUR")
