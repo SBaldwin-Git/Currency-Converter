@@ -43,9 +43,9 @@ class ExchangeRateHandler
       cross_rate = to_currency_rate / base_currency_rate
 
       # Print information for debugging
-      puts "Base currency rate: #{base_currency_rate}"
-      puts "To currency rate: #{to_currency_rate}"
-      puts "Calculated cross rate: #{cross_rate}"
+      # puts "Base currency rate: #{base_currency_rate}"
+      # puts "To currency rate: #{to_currency_rate}"
+      # puts "Calculated cross rate: #{cross_rate}"
 
       # Return the calculated cross-currency rate
       return cross_rate
