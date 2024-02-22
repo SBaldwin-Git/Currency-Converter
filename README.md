@@ -30,8 +30,11 @@ bundle exec irb -I lib -r ./lib/currency_exchange.rb
 
 Given the application currently only supports a JSON file converting from EUR to other currencies, the following examples can be used:
 The first will return an error as converting from USD to GBP is not supported yet.
+
 ```
 CurrencyExchange.rate(Date.new(2018, 11, 22), "USD", "GBP")
+```
+
 ```
 CurrencyExchange.rate(Date.new(2018, 12, 11), "EUR", "USD")
 ```
